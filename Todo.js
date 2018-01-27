@@ -1,4 +1,3 @@
-alert("hi");
 $("ul").on("click","li",function(){
   $(this).toggleClass("completed");
 });
@@ -12,7 +11,7 @@ $("input[type='text'").on("keypress",function(event){
   if(event.which===13){
     var todotext=$(this).val();
     $(this).val("");
-    $("ul").append("<li><i class="fa fa-trash-o" aria-hidden="true"></i></span> "+todotext+"</li>");
+    $("ul").append("<li><i class='fa fa-trash-o' aria-hidden='true'></i></span> "+todotext+"</li>");
   };
 });
 $(".fa-plus-circle").click(function(){
