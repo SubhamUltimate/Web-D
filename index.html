@@ -13,33 +13,13 @@
   <h1><i class="fa fa-bars" aria-hidden="true"></i> Todo-List<i class="fa fa-plus-circle" aria-hidden="true"></i></h1>
   <input type="text" placeholder="Enter your todo"></input>
 <ul>
-  <li><span><i class="fas fa-trash-alt"></i></span> Breakfast to be done</li>
-  <li><span><i class="fas fa-trash-alt"></i></span> Go to class</li>
-  <li><span><i class="fas fa-trash-alt"></i></span> Go to lab</li>
-  <li><span><i class="fas fa-trash-alt"></i></span> Return from lab</li>
-  <li><span><i class="fas fa-trash-alt"></i></span> Snacks at 5:00PM</li>
+  <li><span><i class="fa fa-trash-o" aria-hidden="true"></i></span> Breakfast to be done</li>
+  <li><span><i class="fa fa-trash-o" aria-hidden="true"></i></span> Go to class</li>
+  <li><span><i class="fa fa-trash-o" aria-hidden="true"></i></span> Go to lab</li>
+  <li><span><i class="fa fa-trash-o" aria-hidden="true"></i></span> Return from lab</li>
+  <li><span><i class="fa fa-trash-o" aria-hidden="true"></i></span> Snacks at 5:00PM</li>
 </ul>
 </div>
-<script>
-$("ul").on("click","li",function(){
-  $(this).toggleClass("completed");
-});
-$("ul").on("click","span",function(event){
-  $(this).parent().fadeOut(500,function(){
-    $(this).remove();
-  });
-  event.stopPropagation();
-});
-$("input[type='text'").on("keypress",function(event){
-  if(event.which===13){
-    var todotext=$(this).val();
-    $(this).val("");
-    $("ul").append("<li><span><i class='fas fa-trash-alt'></i></span>"+todotext+"</li>");
-  };
-});
-$(".fa-plus-circle").click(function(){
-  $("input[type='text'").fadeToggle();
-});
-  </script>
+<script type="text/javascript" src="Todo.js"></script>
   </body>
 </html>
